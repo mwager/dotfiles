@@ -1,4 +1,6 @@
-# Mathias’s dotfiles
+# Michael’s dotfiles
+
+This repo is a fork of [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 ## Installation
 
