@@ -39,6 +39,12 @@ brew install git
 #brew install imagemagick
 brew install lynx
 brew install node
+
+brew install mongodb
+# launch mongodb at startup:
+# ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+# launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+
 brew install pigz
 brew install rename
 brew install rhino

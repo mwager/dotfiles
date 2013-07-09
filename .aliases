@@ -7,18 +7,26 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
 alias g="git"
+alias com="git commit -a -m"
 alias h="history"
 alias j="jobs"
-alias v="vim"
-alias m="mate ."
-alias s="subl ."
 alias o="open"
 alias oo="open ."
+
+# register sublime text cli
+# sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/bin/subl3
+alias s="subl3"
+alias s3="subl3"
+
+alias e="emacs"
+alias t="tail -f"
+
+alias htdocs="cd /Volumes/Data/htdocs"
+
+# MYSQL
+alias db="mysql -uroot -proot"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -32,6 +40,9 @@ alias l="ls -l ${colorflag}"
 
 # List all files colorized in long format, including dot files
 alias la="ls -la ${colorflag}"
+
+alias ll="ls -rtlah ${colorflag}"
+alias rm='rm -i'
 
 # List only directories
 alias lsd='ls -l ${colorflag} | grep "^d"'
