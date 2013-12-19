@@ -520,6 +520,17 @@ function sniff() {
     #-X  -->  human style wie in wireshark, -q -> nur zeit und ips
     sudo tcpdump -i en1 -s 0 -B 524288 -X -q
 }
+# old sniff() function:
+# if [ $# -lt 1 ]
+#    then
+#        echo "Usage: sniff <interface>"
+#        echo "zB sniff en1 oder sniff lo0"
+#        return 1
+#    fi
+#    echo "Start Sniffing on $1"
+#    #sudo tcpdump -i $1 -q -X        #-X  -->  human style wie in wireshark, -q -> nur zeit und ips
+#    sudo snort -i $1 -edv    #so ist snort einfach ein PaketLogger aber mehr Optionen als tcpdump)
+
 
 # prettify a unformatted json string
 # and copy the result to clipboard
@@ -538,19 +549,6 @@ function enc() {
     #-X  -->  human style wie in wireshark, -q -> nur zeit und ips
     sudo tcpdump -i en1 -s 0 -B 524288 -X -q
 }
-
-
-
-# old sniff() function:
-# if [ $# -lt 1 ]
-#    then
-#        echo "Usage: sniff <interface>"
-#        echo "zB sniff en1 oder sniff lo0"
-#        return 1
-#    fi
-#    echo "Start Sniffing on $1"
-#    #sudo tcpdump -i $1 -q -X        #-X  -->  human style wie in wireshark, -q -> nur zeit und ips
-#    sudo snort -i $1 -edv    #so ist snort einfach ein PaketLogger aber mehr Optionen als tcpdump)
 
 # my own ip (local)
 #ip() {
