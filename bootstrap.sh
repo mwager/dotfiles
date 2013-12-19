@@ -4,11 +4,7 @@ git pull origin master
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
 		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
-
-    # hm ?
     source ~/.bash_profile
-
-    echo 'Done. Please execute "source ~/.bash_profile" now.'
 }
 
 doIt
