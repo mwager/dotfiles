@@ -24,9 +24,11 @@
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 
-[apply]
+# This causes some indentation problems after commits :(
+# probably because using global rebase option on pull by default
+#[apply]
 	# Detect whitespace errors when applying a patch
-	whitespace = fix
+	#whitespace = fix
 
 [core]
 	# Use custom `.gitignore` and `.gitattributes`

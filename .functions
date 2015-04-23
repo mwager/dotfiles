@@ -559,3 +559,7 @@ function enc() {
 #record() { #params: name.wav, secs ==> $1 und $2
 #  rec -c2 -r44100 -t wav $1 trim 0 $2 #channel=2 rate=44100 type=wav
 #}
+
+function git_search() {
+  git log -g --grep=$1
+}
