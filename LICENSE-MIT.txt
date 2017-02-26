@@ -1,4 +1,4 @@
-Copyright Mathias Bynens <http://mathiasbynens.be/>
+Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 Forked and modified by Michael Wager <http://mwager.de>
 
