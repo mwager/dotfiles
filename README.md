@@ -2,6 +2,9 @@
 
 This repo is a fork of [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 
+Some additional helpful tools I use: [./nice-tools.md](./nice-tools.md)
+
+
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
 
 ## Installation
