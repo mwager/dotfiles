@@ -58,6 +58,17 @@ function fs() {
 	fi;
 }
 
+# simple caesar chiffre enc/dec
+function enc () {
+	local plaintext=$1;
+	echo $plaintext | tr "A-Za-z" "N-ZA-Mn-za-m"
+}
+function dec() {
+	local encryptedtext=$1;
+	echo $encryptedtext | tr "A-Za-z" "N-ZA-Mn-za-m"
+}
+
+
 # Use Git’s colored diff when available
 hash git &>/dev/null;
 if [ $? -eq 0 ]; then
@@ -82,6 +93,16 @@ function gitio() {
 		return 1;
 	fi;
 	curl -i https://git.io/ -F "url=${2}" -F "code=${1}";
+}
+
+function pushit() {
+	echo "executing 'git push origin HEAD' ... ✈️"
+	git push origin HEAD
+}
+
+function pullit() {
+	echo "executing 'git pull --rebase origin master' ... ✈️"
+	git pull --rebase origin master
 }
 
 # Start an HTTP server from a directory, optionally specifying the port
@@ -526,11 +547,6 @@ function formatjson() {
     # cat unformatted.json | python -m json.tool > formatted.json
     # cat $1 | python -m json.tool | pbcopy
     pbpaste | python -m json.tool | pbcopy
-}
-
-function enc() {
-    #-X  -->  human style wie in wireshark, -q -> nur zeit und ips
-    sudo tcpdump -i en1 -s 0 -B 524288 -X -q
 }
 
 # my own ip (local)

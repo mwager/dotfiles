@@ -27,7 +27,8 @@ else # macOS `ls`
 fi
 
 # sublime 3 alias
-ln -s /Applications/Sublime\ Text\ 3.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+# does already exist:
+#ln -s /Applications/Sublime\ Text\ 3.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
